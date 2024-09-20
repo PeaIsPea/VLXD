@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D9EECFC-5C0E-4057-9E02-D7016A541C45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\Class1.cs" />
+    <Compile Include="BusinessLayer\DanhMucHangBLL.cs" />
+    <Compile Include="BusinessLayer\DonViTinhBLL.cs" />
+    <Compile Include="BusinessLayer\DVTGiaBLL.cs" />
+    <Compile Include="BusinessLayer\GiaBLL.cs" />
+    <Compile Include="BusinessLayer\KhuVucBLL.cs" />
+    <Compile Include="BusinessLayer\LoaiHangBLL.cs" />
+    <Compile Include="BusinessLayer\NguoiDungBLL.cs" />
+    <Compile Include="BusinessLayer\SanPhamBLL.cs" />
+    <Compile Include="DataLayer\DanhMucHangDAL.cs" />
+    <Compile Include="DataLayer\DataAccessHelper.cs" />
+    <Compile Include="DataLayer\DonViTinhDAL.cs" />
+    <Compile Include="DataLayer\DVTGiaDAL.cs" />
+    <Compile Include="DataLayer\GiaDAL.cs" />
+    <Compile Include="DataLayer\KhuVucDAL.cs" />
+    <Compile Include="DataLayer\LoaiHangDAL.cs" />
+    <Compile Include="DataLayer\NguoiDungDAL.cs" />
+    <Compile Include="DataLayer\SanPhamDAL.cs" />
+    <Compile Include="Entities\DanhMucHang.cs" />
+    <Compile Include="Entities\DonViTinh.cs" />
+    <Compile Include="Entities\DVTGia.cs" />
+    <Compile Include="Entities\Gia.cs" />
+    <Compile Include="Entities\KhuVuc.cs" />
+    <Compile Include="Entities\LoaiHang.cs" />
+    <Compile Include="Entities\NguoiDung.cs" />
+    <Compile Include="Entities\SanPham.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddArea.Designer.cs">
+      <DependentUpon>frmAddArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddCurrency.Designer.cs">
+      <DependentUpon>frmAddCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddDMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddDMH.Designer.cs">
+      <DependentUpon>frmAddDMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddSubCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddSubCategory.Designer.cs">
+      <DependentUpon>frmAddSubCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddUnit.Designer.cs">
+      <DependentUpon>frmAddUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmAddVatTu.Designer.cs">
+      <DependentUpon>frmAddVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmArea.Designer.cs">
+      <DependentUpon>frmArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmChangeProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmChangeProfile.Designer.cs">
+      <DependentUpon>frmChangeProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmCurrency.Designer.cs">
+      <DependentUpon>frmCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmMaterials.Designer.cs">
+      <DependentUpon>frmMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmSubCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmSubCategory.Designer.cs">
+      <DependentUpon>frmSubCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmThemNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmThemNguoiDung.Designer.cs">
+      <DependentUpon>frmThemNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmUnit.Designer.cs">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmUserManagement.Designer.cs">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmVatTu.Designer.cs">
+      <DependentUpon>frmVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\frmAddArea.resx">
+      <DependentUpon>frmAddArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmAddCurrency.resx">
+      <DependentUpon>frmAddCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmAddDMH.resx">
+      <DependentUpon>frmAddDMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmAddSubCategory.resx">
+      <DependentUpon>frmAddSubCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmAddUnit.resx">
+      <DependentUpon>frmAddUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmAddVatTu.resx">
+      <DependentUpon>frmAddVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmArea.resx">
+      <DependentUpon>frmArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmChangeProfile.resx">
+      <DependentUpon>frmChangeProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmCurrency.resx">
+      <DependentUpon>frmCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmMaterials.resx">
+      <DependentUpon>frmMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmSubCategory.resx">
+      <DependentUpon>frmSubCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmThemNguoiDung.resx">
+      <DependentUpon>frmThemNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmUnit.resx">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmUserManagement.resx">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmVatTu.resx">
+      <DependentUpon>frmVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\1285670683_124662254_1-Hinh-anh-ca--Son-ba-Gach-nh-Cung-cap-vat-tu-xay-dung-1285670683.jpg" />
+    <Content Include="Images\1358321953_24736.ico" />
+    <Content Include="Images\start_1 %281%29.png" />
+    <Content Include="Images\start_1 %282%29.png" />
+    <Content Include="Images\start_1.png" />
+    <Content Include="Images\win %281%29.png" />
+    <Content Include="Images\win %282%29.png" />
+    <Content Include="Images\win.png" />
+    <Content Include="Images\win_trans_blue.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
